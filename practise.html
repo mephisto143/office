@@ -26,7 +26,6 @@
 
         header h1 {
             font-size: 3rem;
-            margin-bottom: 10px;
         }
 
         nav {
@@ -66,7 +65,7 @@
         /* Cards */
         .cards {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
         }
 
@@ -76,75 +75,62 @@
             border-radius: 15px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
             transition: 0.3s;
+            text-align: center;
         }
 
         .card:hover {
             transform: translateY(-8px);
         }
 
-        /* About */
-        .about {
+        /* Stats */
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
             text-align: center;
-            line-height: 1.7;
-            font-size: 1rem;
             margin-bottom: 60px;
         }
 
-        /* Portfolio */
-        .portfolio img {
-            width: 100%;
-            border-radius: 12px;
+        .stats h3 {
+            font-size: 2.5rem;
+            color: #667eea;
         }
 
-        /* Testimonials */
-        .testimonial {
+        /* FAQ */
+        .faq {
             background: white;
             padding: 25px;
             border-radius: 15px;
-            text-align: center;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
 
-        .testimonial span {
-            display: block;
-            margin-top: 10px;
+        /* Newsletter */
+        .newsletter {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            padding: 50px 20px;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+
+        .newsletter input {
+            padding: 12px;
+            width: 250px;
+            border-radius: 25px;
+            border: none;
+            margin-right: 10px;
+        }
+
+        .newsletter button {
+            padding: 12px 25px;
+            border-radius: 25px;
+            border: none;
+            background: white;
             color: #667eea;
             font-weight: bold;
-        }
-
-        /* Contact */
-        form {
-            background: white;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        }
-
-        form input, form textarea {
-            width: 100%;
-            padding: 12px;
-            margin-bottom: 15px;
-            border-radius: 8px;
-            border: 1px solid #ccc;
-        }
-
-        form button {
-            background: #667eea;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 30px;
             cursor: pointer;
-        }
-
-        /* CTA */
-        .cta {
-            background: linear-gradient(135deg, #764ba2, #667eea);
-            color: white;
-            text-align: center;
-            padding: 60px 20px;
-            border-radius: 20px;
-            margin-top: 60px;
         }
 
         footer {
@@ -174,75 +160,45 @@
 
 <div class="container">
 
-    <!-- About -->
-    <section class="about">
-        <h2 class="section-title">About Us</h2>
-        <p>
-            We create modern, fast, and responsive websites using the latest web technologies.
-            Our goal is to deliver clean design with great user experience.
-        </p>
-    </section>
-
-    <!-- Services -->
+    <!-- Stats -->
     <section>
-        <h2 class="section-title">Our Services</h2>
-        <div class="cards">
-            <div class="card">
-                <h3>💻 Web Development</h3>
-                <p>Custom websites using HTML, CSS, and JavaScript.</p>
+        <h2 class="section-title">Our Achievements</h2>
+        <div class="stats">
+            <div>
+                <h3>120+</h3>
+                <p>Projects Completed</p>
             </div>
-            <div class="card">
-                <h3>🎯 UI/UX Design</h3>
-                <p>Attractive layouts with user-friendly experience.</p>
+            <div>
+                <h3>80+</h3>
+                <p>Happy Clients</p>
             </div>
-            <div class="card">
-                <h3>⚡ Performance</h3>
-                <p>Fast-loading and optimized websites.</p>
+            <div>
+                <h3>5+</h3>
+                <p>Years Experience</p>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio -->
-    <section class="portfolio">
-        <h2 class="section-title">Our Work</h2>
-        <div class="cards">
-            <img src="https://picsum.photos/400/250?1">
-            <img src="https://picsum.photos/400/250?2">
-            <img src="https://picsum.photos/400/250?3">
+    <!-- FAQ -->
+    <section>
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq">
+            <h4>❓ Do you provide responsive design?</h4>
+            <p>Yes, all our websites work perfectly on all devices.</p>
+        </div>
+        <div class="faq">
+            <h4>❓ Can I customize the design?</h4>
+            <p>Absolutely! We build flexible and customizable layouts.</p>
         </div>
     </section>
 
-    <!-- Testimonials -->
-    <section>
-        <h2 class="section-title">Testimonials</h2>
-        <div class="cards">
-            <div class="testimonial">
-                "Amazing design and fast delivery!"
-                <span>- Client A</span>
-            </div>
-            <div class="testimonial">
-                "Very professional and modern UI."
-                <span>- Client B</span>
-            </div>
-        </div>
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Subscribe to our Newsletter</h2>
+        <p>Get latest updates and tips directly in your inbox</p><br>
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
     </section>
-
-    <!-- Contact -->
-    <section>
-        <h2 class="section-title">Contact Us</h2>
-        <form>
-            <input type="text" placeholder="Your Name">
-            <input type="email" placeholder="Your Email">
-            <textarea rows="4" placeholder="Your Message"></textarea>
-            <button>Send Message</button>
-        </form>
-    </section>
-
-    <!-- CTA -->
-    <div class="cta">
-        <h2>Ready to Start?</h2>
-        <p>Create stunning websites with simple HTML & CSS</p>
-    </div>
 
 </div>
 
